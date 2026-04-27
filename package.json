@@ -7,7 +7,9 @@
     "build": "strapi build",
     "deploy": "strapi deploy",
     "develop": "strapi develop",
-    "seed:contact": "node ./scripts/seed-contact.js",
+    "seed:workshop": "node scripts/seed-workshop.js",
+    "seed:community": "node scripts/seed-community.js",
+    "seed:product": "node scripts/seed-product.js",
     "start": "strapi start",
     "strapi": "strapi"
   },
