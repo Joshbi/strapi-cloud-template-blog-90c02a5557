@@ -5,45 +5,55 @@
     "singularName": "article",
     "pluralName": "articles",
     "displayName": "Article",
-    "description": "Create your blog content"
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
   "attributes": {
     "title": {
       "type": "string"
     },
     "description": {
-      "type": "text",
-      "maxLength": 80
+      "type": "text"
     },
     "slug": {
       "type": "uid",
       "targetField": "title"
     },
-    "cover": {
+    "featuredImage": {
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images", "files", "videos"]
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "content": {
+      "type": "richtext"
     },
     "author": {
       "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::author.author",
-      "inversedBy": "articles"
-    },
-    "category": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::category.category",
-      "inversedBy": "articles"
+      "relation": "oneToOne",
+      "target": "api::author.author"
     },
     "blocks": {
       "type": "dynamiczone",
-      "components": ["shared.media", "shared.quote", "shared.rich-text", "shared.slider"]
+      "components": [
+        "blocks.person-card",
+        "blocks.hero",
+        "blocks.heading-section",
+        "blocks.faqs",
+        "blocks.content-with-image",
+        "blocks.card-grid",
+        "blocks.markdown",
+        "blocks.featured-articles"
+      ]
+    },
+    "contentTags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag"
     }
   }
 }
