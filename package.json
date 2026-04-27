@@ -1,5 +1,5 @@
 {
-  "name": "my-app-name",
+  "name": "server",
   "version": "0.1.0",
   "private": true,
   "description": "A Strapi application",
@@ -7,32 +7,34 @@
     "build": "strapi build",
     "deploy": "strapi deploy",
     "develop": "strapi develop",
+    "start": "strapi start",
+    "strapi": "strapi",
+    "clean": "rm -rf dist",
     "seed:workshop": "node scripts/seed-workshop.js",
     "seed:community": "node scripts/seed-community.js",
-    "seed:product": "node scripts/seed-product.js",
-    "start": "strapi start",
-    "strapi": "strapi"
+    "seed:product": "node scripts/seed-product.js"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "5.43.0",
-    "@strapi/plugin-users-permissions": "5.43.0",
-    "@strapi/provider-upload-cloudinary": "^5.43.0",
-    "@strapi/strapi": "5.43.0",
-    "fs-extra": "^10.0.0",
-    "mime-types": "^2.1.27",
-    "pg": "^8.20.0",
+    "@strapi/plugin-cloud": "5.41.1",
+    "@strapi/plugin-users-permissions": "5.41.1",
+    "@strapi/strapi": "5.41.1",
+    "better-sqlite3": "11.3.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
     "styled-components": "^6.0.0"
   },
   "devDependencies": {
-    "@types/node": "^20.0.0",
-    "typescript": "^5.4.4"
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "typescript": "^5"
   },
   "engines": {
     "node": ">=18.0.0 <=22.x.x",
     "npm": ">=6.0.0"
   },
-  "packageManager": "yarn@1.22.21+sha1.1959a18351b811cdeedbd484a8f86c3cc3bbaf72"
+  "strapi": {
+    "uuid": "99a1a255-d9bf-4477-ab87-181cdf03bcbd"
+  }
 }
