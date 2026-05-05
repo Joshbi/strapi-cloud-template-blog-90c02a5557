@@ -43,7 +43,8 @@
         "blocks.person-card",
         "blocks.markdown",
         "blocks.featured-articles",
-        "blocks.newsletter"
+        "blocks.newsletter",
+        "blocks.gallery"
       ],
       "pluginOptions": {
         "i18n": {

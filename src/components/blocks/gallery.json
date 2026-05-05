@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_blocks_galleries",
+  "info": {
+    "displayName": "Gallery"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "subHeading": {
+      "type": "string"
+    },
+    "images": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    }
+  }
+}
