@@ -9,11 +9,11 @@ export default ({ env }) => ({
       },
       actionOptions: {
         upload: {
-          fetch_format: "auto",
+          format: "webp",
           quality: "auto",
         },
         uploadStream: {
-          fetch_format: "auto",
+          format: "webp",
           quality: "auto",
         },
         delete: {},
