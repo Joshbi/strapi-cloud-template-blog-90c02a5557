@@ -12,7 +12,10 @@ export default ({ env }) => ({
           fetch_format: "auto",
           quality: "auto",
         },
-        uploadStream: {},
+        uploadStream: {
+          fetch_format: "auto",
+          quality: "auto",
+        },
         delete: {},
       },
     },
