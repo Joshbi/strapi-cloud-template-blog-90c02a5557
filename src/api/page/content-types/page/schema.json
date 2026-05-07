@@ -53,7 +53,8 @@
         "blocks.markdown",
         "blocks.featured-articles",
         "blocks.community-links",
-        "blocks.featured-workshops"
+        "blocks.featured-workshops",
+        "blocks.gallery"
       ],
       "pluginOptions": {
         "i18n": {
