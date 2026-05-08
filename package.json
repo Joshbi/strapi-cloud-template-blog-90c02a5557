@@ -15,12 +15,13 @@
     "seed:product": "node scripts/seed-product.js"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "5.41.1",
+    "@strapi/plugin-cloud": "5.45.0",
     "@strapi/plugin-seo": "^2.0.9",
-    "@strapi/plugin-users-permissions": "5.41.1",
-    "@strapi/provider-upload-cloudinary": "^5.41.1",
-    "@strapi/strapi": "5.41.1",
+    "@strapi/plugin-users-permissions": "5.45.0",
+    "@strapi/provider-upload-cloudinary": "^5.45.0",
+    "@strapi/strapi": "5.45.0",
     "better-sqlite3": "11.3.0",
+    "pg": "^8.20.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",

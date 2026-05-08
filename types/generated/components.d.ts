@@ -65,6 +65,18 @@ export interface BlocksFeaturedWorkshops extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksGallery extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_galleries';
+  info: {
+    displayName: 'Gallery';
+  };
+  attributes: {
+    heading: Schema.Attribute.String;
+    images: Schema.Attribute.Media<'images', true> & Schema.Attribute.Required;
+    subHeading: Schema.Attribute.String;
+  };
+}
+
 export interface BlocksHeadingSection extends Struct.ComponentSchema {
   collectionName: 'components_blocks_heading_sections';
   info: {
@@ -280,6 +292,7 @@ declare module '@strapi/strapi' {
       'blocks.faqs': BlocksFaqs;
       'blocks.featured-articles': BlocksFeaturedArticles;
       'blocks.featured-workshops': BlocksFeaturedWorkshops;
+      'blocks.gallery': BlocksGallery;
       'blocks.heading-section': BlocksHeadingSection;
       'blocks.hero': BlocksHero;
       'blocks.markdown': BlocksMarkdown;
