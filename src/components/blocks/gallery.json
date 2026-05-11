@@ -18,6 +18,11 @@
       "type": "media",
       "multiple": true,
       "required": true
+    },
+    "configuration": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.configuration"
     }
   }
 }

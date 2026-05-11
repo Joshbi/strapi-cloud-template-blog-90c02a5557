@@ -7,6 +7,7 @@ export interface BlocksCardGrid extends Struct.ComponentSchema {
   };
   attributes: {
     card: Schema.Attribute.Component<'shared.card', true>;
+    configuration: Schema.Attribute.Component<'shared.configuration', false>;
   };
 }
 
@@ -16,6 +17,7 @@ export interface BlocksCommunityLinks extends Struct.ComponentSchema {
     displayName: 'Community Links';
   };
   attributes: {
+    configuration: Schema.Attribute.Component<'shared.configuration', false>;
     heading: Schema.Attribute.String;
     link: Schema.Attribute.Component<'shared.community-link', true>;
   };
@@ -27,6 +29,7 @@ export interface BlocksContentWithImage extends Struct.ComponentSchema {
     displayName: 'Content With Image';
   };
   attributes: {
+    configuration: Schema.Attribute.Component<'shared.configuration', false>;
     heading: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images'>;
     link: Schema.Attribute.Component<'shared.link', false>;
@@ -41,6 +44,7 @@ export interface BlocksFaqs extends Struct.ComponentSchema {
     displayName: 'Faqs';
   };
   attributes: {
+    configuration: Schema.Attribute.Component<'shared.configuration', false>;
     faq: Schema.Attribute.Component<'shared.card', true>;
   };
 }
@@ -52,6 +56,7 @@ export interface BlocksFeaturedArticles extends Struct.ComponentSchema {
   };
   attributes: {
     articles: Schema.Attribute.Relation<'oneToMany', 'api::article.article'>;
+    configuration: Schema.Attribute.Component<'shared.configuration', false>;
   };
 }
 
@@ -61,6 +66,7 @@ export interface BlocksFeaturedWorkshops extends Struct.ComponentSchema {
     displayName: 'Featured Workshops';
   };
   attributes: {
+    configuration: Schema.Attribute.Component<'shared.configuration', false>;
     workshops: Schema.Attribute.Relation<'oneToMany', 'api::workshop.workshop'>;
   };
 }
@@ -71,6 +77,7 @@ export interface BlocksGallery extends Struct.ComponentSchema {
     displayName: 'Gallery';
   };
   attributes: {
+    configuration: Schema.Attribute.Component<'shared.configuration', false>;
     heading: Schema.Attribute.String;
     images: Schema.Attribute.Media<'images', true> & Schema.Attribute.Required;
     subHeading: Schema.Attribute.String;
@@ -85,6 +92,7 @@ export interface BlocksHeadingSection extends Struct.ComponentSchema {
   };
   attributes: {
     anchorLink: Schema.Attribute.String;
+    configuration: Schema.Attribute.Component<'shared.configuration', false>;
     heading: Schema.Attribute.String;
     subHeading: Schema.Attribute.String;
   };
@@ -96,6 +104,7 @@ export interface BlocksHero extends Struct.ComponentSchema {
     displayName: 'Hero';
   };
   attributes: {
+    configuration: Schema.Attribute.Component<'shared.configuration', false>;
     heading: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images'>;
     links: Schema.Attribute.Component<'shared.link', true>;
@@ -109,6 +118,7 @@ export interface BlocksMarkdown extends Struct.ComponentSchema {
     displayName: 'Markdown';
   };
   attributes: {
+    configuration: Schema.Attribute.Component<'shared.configuration', false>;
     content: Schema.Attribute.RichText;
   };
 }
@@ -119,6 +129,7 @@ export interface BlocksNewsletter extends Struct.ComponentSchema {
     displayName: 'Newsletter';
   };
   attributes: {
+    configuration: Schema.Attribute.Component<'shared.configuration', false>;
     formId: Schema.Attribute.String;
     heading: Schema.Attribute.String;
     label: Schema.Attribute.String;
@@ -133,6 +144,7 @@ export interface BlocksPersonCard extends Struct.ComponentSchema {
     displayName: 'Person Card';
   };
   attributes: {
+    configuration: Schema.Attribute.Component<'shared.configuration', false>;
     image: Schema.Attribute.Media<'images'>;
     personJob: Schema.Attribute.String;
     personName: Schema.Attribute.String;
@@ -201,6 +213,16 @@ export interface SharedCommunityLink extends Struct.ComponentSchema {
     href: Schema.Attribute.String;
     label: Schema.Attribute.String;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedConfiguration extends Struct.ComponentSchema {
+  collectionName: 'components_shared_configurations';
+  info: {
+    displayName: 'Configuration';
+  };
+  attributes: {
+    isAnimation: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
   };
 }
 
@@ -303,6 +325,7 @@ declare module '@strapi/strapi' {
       'layout.header': LayoutHeader;
       'shared.card': SharedCard;
       'shared.community-link': SharedCommunityLink;
+      'shared.configuration': SharedConfiguration;
       'shared.link': SharedLink;
       'shared.logo': SharedLogo;
       'shared.meta-social': SharedMetaSocial;

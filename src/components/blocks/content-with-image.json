@@ -26,6 +26,11 @@
       ],
       "type": "media",
       "multiple": false
+    },
+    "configuration": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.configuration"
     }
   }
 }

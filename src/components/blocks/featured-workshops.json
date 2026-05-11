@@ -9,6 +9,11 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::workshop.workshop"
+    },
+    "configuration": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.configuration"
     }
   }
 }

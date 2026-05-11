@@ -19,6 +19,11 @@
     },
     "formId": {
       "type": "string"
+    },
+    "configuration": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.configuration"
     }
   }
 }

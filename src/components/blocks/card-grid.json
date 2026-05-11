@@ -10,6 +10,11 @@
       "type": "component",
       "repeatable": true,
       "component": "shared.card"
+    },
+    "configuration": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.configuration"
     }
   }
 }

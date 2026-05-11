@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_configurations",
+  "info": {
+    "displayName": "Configuration"
+  },
+  "options": {},
+  "attributes": {
+    "isAnimation": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
