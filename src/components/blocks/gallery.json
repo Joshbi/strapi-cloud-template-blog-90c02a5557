@@ -36,6 +36,37 @@
       ],
       "default": "1"
     },
+    "desktopColumns": {
+      "type": "enumeration",
+      "enum": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "default": "3"
+    },
+    "gap": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "sm",
+        "md",
+        "lg"
+      ],
+      "default": "md"
+    },
+    "imageRound": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "sm",
+        "md",
+        "lg",
+        "full"
+      ],
+      "default": "none"
+    },
     "configuration": {
       "type": "component",
       "repeatable": false,
