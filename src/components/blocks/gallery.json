@@ -19,6 +19,15 @@
       "multiple": true,
       "required": true
     },
+    "gridType": {
+      "type": "enumeration",
+      "enum": [
+        "grid",
+        "masonry",
+        "masonry-auto"
+      ],
+      "default": "grid"
+    },
     "configuration": {
       "type": "component",
       "repeatable": false,

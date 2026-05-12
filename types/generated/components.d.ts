@@ -78,6 +78,10 @@ export interface BlocksGallery extends Struct.ComponentSchema {
   };
   attributes: {
     configuration: Schema.Attribute.Component<'shared.configuration', false>;
+    gridType: Schema.Attribute.Enumeration<
+      ['grid', 'masonry', 'masonry-auto']
+    > &
+      Schema.Attribute.DefaultTo<'grid'>;
     heading: Schema.Attribute.String;
     images: Schema.Attribute.Media<'images', true> & Schema.Attribute.Required;
     subHeading: Schema.Attribute.String;
