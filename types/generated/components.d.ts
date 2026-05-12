@@ -84,6 +84,8 @@ export interface BlocksGallery extends Struct.ComponentSchema {
       Schema.Attribute.DefaultTo<'grid'>;
     heading: Schema.Attribute.String;
     images: Schema.Attribute.Media<'images', true> & Schema.Attribute.Required;
+    mobileColumns: Schema.Attribute.Enumeration<['1', '2']> &
+      Schema.Attribute.DefaultTo<'1'>;
     subHeading: Schema.Attribute.String;
   };
 }

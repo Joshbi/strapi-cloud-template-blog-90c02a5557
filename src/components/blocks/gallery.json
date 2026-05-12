@@ -28,6 +28,14 @@
       ],
       "default": "grid"
     },
+    "mobileColumns": {
+      "type": "enumeration",
+      "enum": [
+        "1",
+        "2"
+      ],
+      "default": "1"
+    },
     "configuration": {
       "type": "component",
       "repeatable": false,
